@@ -26,12 +26,14 @@ export class FilterComponent {
     this.router.navigate([], {
       queryParams: { query: event },
       queryParamsHandling: 'merge',
+      replaceUrl: true,
     });
   }
   onPageIncrease() {
     this.router.navigate([], {
       queryParams: { page: this.page + 1 },
       queryParamsHandling: 'merge',
+      replaceUrl: true,
     });
     this.page++;
   }
@@ -39,6 +41,7 @@ export class FilterComponent {
     this.router.navigate([], {
       queryParams: { skip: this.skip + 10 },
       queryParamsHandling: 'merge',
+      replaceUrl: true,
     });
     this.skip += 10;
   }
